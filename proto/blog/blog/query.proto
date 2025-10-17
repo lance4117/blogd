@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package blog.blog;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+import "blog/blog/params.proto";
+import "blog/blog/blog_item.proto";
+
+option go_package = "blog/x/blog/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  
+  // Parameters queries the parameters of the module.
+  rpc Params (QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/blog/blog/params";
+  
+  }
+  
+  // Queries a list of PostList items.
+  rpc PostList (QueryPostListRequest) returns (QueryPostListResponse) {
+    option (google.api.http).get = "/blog/blog/post_list";
+  
+  }
+  
+  // Queries a list of PostItem items.
+  rpc PostItem (QueryPostItemRequest) returns (QueryPostItemResponse) {
+    option (google.api.http).get = "/blog/blog/post_item";
+  
+  }
+  
+  // Queries a list of PostCount items.
+  rpc PostCount (QueryPostCountRequest) returns (QueryPostCountResponse) {
+    option (google.api.http).get = "/blog/blog/post_count";
+  
+  }
+}
+// QueryParamsRequest is request type for the Query/Params RPC method.
+message QueryParamsRequest {}
+
+// QueryParamsResponse is response type for the Query/Params RPC method.
+message QueryParamsResponse {
+  
+  // params holds all the parameters of this module.
+  Params params = 1 [(gogoproto.nullable) = false, (amino.dont_omitempty) = true];
+}
+
+message QueryPostListRequest {
+  // 起始ID（包含），默认0
+  uint64 start_id = 1;
+
+  // 结束ID（包含）；为0或不填时，表示直到最后一条
+  uint64 end_id   = 2;
+}
+
+message QueryPostListResponse {
+  repeated BlogItem blogs = 1;
+  // 可选：返回总数，便于前端判断是否还有下一页
+  uint64 total = 2;
+}
+
+message QueryPostItemRequest {
+  uint64 id = 1;
+}
+
+message QueryPostItemResponse {
+  BlogItem blog = 1;
+}
+
+message QueryPostCountRequest {}
+
+message QueryPostCountResponse {
+  int64 count = 1;
+}
+

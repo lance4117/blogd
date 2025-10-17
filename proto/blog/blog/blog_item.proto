@@ -1,0 +1,13 @@
+syntax = "proto3";
+package blog.blog;
+
+option go_package = "blog/x/blog/types";
+
+message BlogItem {
+  uint64 id=1;
+  string creator = 2; 
+  string author = 3; 
+  int64 ctm = 4;
+  string title = 5; 
+  string content = 6; 
+}
