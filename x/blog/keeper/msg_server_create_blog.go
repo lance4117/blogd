@@ -2,10 +2,10 @@ package keeper
 
 import (
 	"context"
+	"time"
 
 	"github.com/lance4117/blogd/x/blog/types"
 
-	"gitee.com/lance4117/GoFuse/times"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
@@ -15,7 +15,7 @@ func (k msgServer) CreateBlog(goCtx context.Context, msg *types.MsgCreateBlog) (
 	blogItem := types.BlogItem{
 		Creator: msg.Creator,
 		Author:  msg.Creator,
-		Ctm:     times.NowMilli(),
+		Ctm:     time.Now().UnixMilli(),
 		Title:   msg.Title,
 		Content: msg.Content,
 	}
