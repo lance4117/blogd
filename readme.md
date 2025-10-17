@@ -1,51 +1,37 @@
-# blog
-**blog** is a blockchain built using Cosmos SDK and Tendermint and created with [Ignite CLI](https://ignite.com/cli).
+# blogd — A Simple Blog Blockchain (Cosmos SDK)
 
-## Get started
+> 一个基于 **Cosmos SDK** 与 **CometBFT/Tendermint** 构建的去中心化博客区块链，支持链上发布、存储与查询帖子数据。项目由 **Ignite CLI** 脚手架初始化，支持 gRPC 与 REST 接口，提供完整的 CLI 体验。
 
-```
-ignite chain serve
-```
+---
 
-`serve` command installs dependencies, builds, initializes, and starts your blockchain in development.
+## ✨ 特性
 
-### Configure
+- ✅ 链上创建/更新/删除帖子（Msg 交易）
+- 🔎 分页查询帖子、查询单帖、查询模块参数（Query 服务）
+- 🌐 gRPC 与 REST API（由 `proto` 自动生成）
+- 🧰 一键开发体验：`ignite chain serve`
+- 🧪 包含 `x/blog` 模块、`proto`、`api` 以及二次开发所需的工程脚手架
 
-Your blockchain in development can be configured with `config.yml`. To learn more, see the [Ignite CLI docs](https://docs.ignite.com).
+> 快速开始命令与配置来自 Ignite 官方脚手架约定。详情见项目初始化页提示。  
+> 参考：在仓库首页已有的 “Get started / Configure / Release / Install” 指引（例如 `ignite chain serve`）。
+>
 
-### Web Frontend
+---
 
-Additionally, Ignite CLI offers both Vue and React options for frontend scaffolding:
+## 🧱 目录结构
 
-For a Vue frontend, use: `ignite scaffold vue`
-For a React frontend, use: `ignite scaffold react`
-These commands can be run within your scaffolded blockchain project. 
+```bash
+.
+├── app/               # 应用装配（编码、模块注册等）
+├── x/blog/            # blog 模块：types、keeper、module.go
+│   ├── keeper/
+│   ├── types/
+│   └── module.go
+├── proto/             # Protobuf（tx.proto / query.proto 等）
+├── api/blog/blog/     # 由 proto 生成的 gRPC/REST 适配层
+├── cmd/blogd/         # 可执行入口（blogd）
+├── config.yml         # Ignite 开发配置
+├── Makefile
+├── go.mod / go.sum
+└── README.md
 
-
-For more information see the [monorepo for Ignite front-end development](https://github.com/ignite/web).
-
-## Release
-To release a new version of your blockchain, create and push a new tag with `v` prefix. A new draft release with the configured targets will be created.
-
-```
-git tag v0.1
-git push origin v0.1
-```
-
-After a draft release is created, make your final changes from the release page and publish it.
-
-### Install
-To install the latest version of your blockchain node's binary, execute the following command on your machine:
-
-```
-curl https://get.ignite.com/username/blog@latest! | sudo bash
-```
-`username/blog` should match the `username` and `repo_name` of the Github repository to which the source code was pushed. Learn more about [the install process](https://github.com/allinbits/starport-installer).
-
-## Learn more
-
-- [Ignite CLI](https://ignite.com/cli)
-- [Tutorials](https://docs.ignite.com/guide)
-- [Ignite CLI docs](https://docs.ignite.com)
-- [Cosmos SDK docs](https://docs.cosmos.network)
-- [Developer Chat](https://discord.gg/ignite)
