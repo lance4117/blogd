@@ -3,8 +3,8 @@ package simulation
 import (
 	"math/rand"
 
-	"blog/x/blog/keeper"
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/x/blog/keeper"
+	"github.com/lance4117/blogd/x/blog/types"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"

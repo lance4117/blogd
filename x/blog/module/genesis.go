@@ -3,8 +3,8 @@ package blog
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"blog/x/blog/keeper"
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/x/blog/keeper"
+	"github.com/lance4117/blogd/x/blog/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

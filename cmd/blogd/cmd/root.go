@@ -20,7 +20,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"blog/app"
+	"github.com/lance4117/blogd/app"
 )
 
 // NewRootCmd creates a new root command for blogd. It is called once in the main function.

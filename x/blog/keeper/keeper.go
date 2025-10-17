@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/x/blog/types"
 )
 
 type (

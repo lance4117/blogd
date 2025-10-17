@@ -20,9 +20,9 @@ import (
 
 	// this line is used by starport scaffolding # 1
 
-	modulev1 "blog/api/blog/blog/module"
-	"blog/x/blog/keeper"
-	"blog/x/blog/types"
+	modulev1 "github.com/lance4117/blogd/api/blog/blog/module"
+	"github.com/lance4117/blogd/x/blog/keeper"
+	"github.com/lance4117/blogd/x/blog/types"
 )
 
 var (

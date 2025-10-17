@@ -3,10 +3,10 @@ package blog_test
 import (
 	"testing"
 
-	keepertest "blog/testutil/keeper"
-	"blog/testutil/nullify"
-	blog "blog/x/blog/module"
-	"blog/x/blog/types"
+	keepertest "github.com/lance4117/blogd/testutil/keeper"
+	"github.com/lance4117/blogd/testutil/nullify"
+	blog "github.com/lance4117/blogd/x/blog/module"
+	"github.com/lance4117/blogd/x/blog/types"
 
 	"github.com/stretchr/testify/require"
 )

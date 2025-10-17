@@ -7,8 +7,8 @@ import (
 	clienthelpers "cosmossdk.io/client/v2/helpers"
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 
-	"blog/app"
-	"blog/cmd/blogd/cmd"
+	"github.com/lance4117/blogd/app"
+	"github.com/lance4117/blogd/cmd/blogd/cmd"
 )
 
 func main() {

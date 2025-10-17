@@ -8,9 +8,9 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
 
-	"blog/testutil/sample"
-	blogsimulation "blog/x/blog/simulation"
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/testutil/sample"
+	blogsimulation "github.com/lance4117/blogd/x/blog/simulation"
+	"github.com/lance4117/blogd/x/blog/types"
 )
 
 // avoid unused import issue

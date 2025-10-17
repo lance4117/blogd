@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/x/blog/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

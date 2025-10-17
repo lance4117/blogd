@@ -17,8 +17,8 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	"github.com/stretchr/testify/require"
 
-	"blog/x/blog/keeper"
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/x/blog/keeper"
+	"github.com/lance4117/blogd/x/blog/types"
 )
 
 func BlogKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {

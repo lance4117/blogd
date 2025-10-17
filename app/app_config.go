@@ -53,9 +53,9 @@ import (
 	ibcexported "github.com/cosmos/ibc-go/v8/modules/core/exported"
 	"google.golang.org/protobuf/types/known/durationpb"
 
-	blogmodulev1 "blog/api/blog/blog/module"
-	_ "blog/x/blog/module" // import for side-effects
-	blogmoduletypes "blog/x/blog/types"
+	blogmodulev1 "github.com/lance4117/blogd/api/blog/blog/module"
+	_ "github.com/lance4117/blogd/x/blog/module" // import for side-effects
+	blogmoduletypes "github.com/lance4117/blogd/x/blog/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 )
 

@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	"github.com/stretchr/testify/require"
 
-	"blog/app"
+	"github.com/lance4117/blogd/app"
 )
 
 type (

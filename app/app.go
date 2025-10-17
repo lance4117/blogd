@@ -75,10 +75,10 @@ import (
 	ibctransferkeeper "github.com/cosmos/ibc-go/v8/modules/apps/transfer/keeper"
 	ibckeeper "github.com/cosmos/ibc-go/v8/modules/core/keeper"
 
-	blogmodulekeeper "blog/x/blog/keeper"
+	blogmodulekeeper "github.com/lance4117/blogd/x/blog/keeper"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
-	"blog/docs"
+	"github.com/lance4117/blogd/docs"
 )
 
 const (

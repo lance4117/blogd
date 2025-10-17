@@ -7,7 +7,7 @@ import (
 	"cosmossdk.io/store/prefix"
 	"github.com/cosmos/cosmos-sdk/runtime"
 
-	"blog/x/blog/types"
+	"github.com/lance4117/blogd/x/blog/types"
 )
 
 func (k Keeper) AppendBlog(ctx context.Context, blog types.BlogItem) uint64 {
