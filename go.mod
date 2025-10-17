@@ -1,4 +1,4 @@
-module blog
+module github.com/lance4117/blogd
 
 go 1.24.3
 
